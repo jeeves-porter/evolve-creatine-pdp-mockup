@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evolve Creatine | Zend Wellness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#013D54;
+    --charcoal:#333132;
+    --bandbg:#D2E0E3;
+    --pink:#C23B7A;
+    --pink-light:#F6E3EE;
+    --white:#ffffff;
+    --line:#DDE4E6;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Inter',sans-serif;color:var(--charcoal);background:#fff;}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;}
+  .mockup-flag{
+    background:#111;color:#fff;text-align:center;font-size:13px;padding:8px;
+    font-family:'Inter',sans-serif;letter-spacing:.03em;
+  }
+  .mockup-flag b{color:#ffd166;}
+  .announce{background:var(--navy);color:#fff;text-align:center;font-size:13px;padding:10px;letter-spacing:.03em;}
+  header{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;border-bottom:1px solid var(--line);}
+  .logo{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:22px;letter-spacing:.15em;color:var(--navy);}
+  .logo span{color:var(--pink);}
+  nav a{margin:0 14px;text-decoration:none;color:var(--charcoal);font-size:13px;letter-spacing:.05em;font-weight:600;}
+  .hero{display:flex;gap:56px;padding:56px 48px;max-width:1180px;margin:0 auto;}
+  .hero-gallery{flex:1;display:flex;flex-direction:column;gap:14px;align-items:center;}
+  .hero-gallery img{max-width:100%;border-radius:10px;}
+  .hero-thumbs{display:flex;gap:10px;}
+  .hero-thumbs img{width:64px;height:64px;object-fit:cover;border-radius:6px;border:1px solid var(--line);cursor:pointer;}
+  .hero-info{flex:1;padding-top:8px;}
+  .tag{display:inline-block;background:var(--pink-light);color:var(--pink);font-size:12px;font-weight:700;letter-spacing:.08em;padding:5px 12px;border-radius:20px;margin-bottom:14px;}
+  .hero-info h1{font-size:44px;margin:0 0 6px 0;color:var(--navy);font-weight:700;}
+  .hero-sub{font-size:15px;color:#555;margin-bottom:22px;line-height:1.55;}
+  .benefit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 22px;margin-bottom:26px;}
+  .benefit-grid div{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;}
+  .benefit-grid div:before{content:"✓";color:var(--pink);font-weight:900;}
+  .buybox{border:1px solid var(--line);border-radius:14px;padding:22px;background:#FAFBFC;}
+  .price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:6px;}
+  .price-row .now{font-size:28px;font-weight:700;color:var(--navy);}
+  .price-row .was{font-size:16px;color:#999;text-decoration:line-through;}
+  .price-sub{font-size:13px;color:#666;margin-bottom:18px;}
+  .cta{display:block;width:100%;background:var(--navy);color:#fff;text-align:center;padding:16px;border-radius:8px;font-weight:700;letter-spacing:.04em;text-decoration:none;font-size:15px;border:none;cursor:pointer;}
+  .cta:hover{background:#025272;}
+  .trust-row{display:flex;gap:18px;margin-top:16px;font-size:12.5px;color:#666;}
+  .trust-row div{display:flex;align-items:center;gap:6px;}
+  .badges{background:var(--navy);color:#fff;display:flex;justify-content:center;flex-wrap:wrap;gap:36px;padding:20px 24px;font-size:13px;letter-spacing:.03em;}
+  .section{padding:64px 48px;max-width:1180px;margin:0 auto;}
+  .section.band{background:var(--bandbg);max-width:none;padding:64px 48px;}
+  .section.band .inner{max-width:1180px;margin:0 auto;}
+  .center{text-align:center;}
+  .section h2{font-size:34px;color:var(--navy);margin-bottom:10px;font-weight:700;}
+  .section .lede{max-width:680px;margin:0 auto 40px auto;text-align:center;color:#555;font-size:15px;line-height:1.6;}
+  .two-col{display:flex;gap:56px;align-items:flex-start;}
+  .accordion-item{border-bottom:1px solid var(--line);padding:16px 0;}
+  .accordion-item h4{margin:0;font-size:16px;display:flex;justify-content:space-between;cursor:pointer;color:var(--navy);}
+  .accordion-item p{margin:10px 0 0 0;font-size:14px;color:#555;line-height:1.55;}
+  .steps{display:flex;gap:28px;}
+  .step{flex:1;text-align:center;}
+  .step .num{width:38px;height:38px;line-height:38px;background:var(--navy);color:#fff;border-radius:50%;margin:0 auto 14px auto;font-weight:700;}
+  .step h4{margin:0 0 8px 0;font-size:16px;color:var(--navy);}
+  .step p{font-size:13.5px;color:#666;margin:0;}
+  .citation-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px 32px;max-width:820px;margin:0 auto;}
+  .citation-card h3{margin-top:0;color:var(--navy);font-size:20px;}
+  .citation-card p{font-size:14.5px;color:#555;line-height:1.6;}
+  .stat-row{display:flex;gap:40px;margin:20px 0;}
+  .stat{flex:1;text-align:center;border-left:3px solid var(--pink);padding-left:16px;}
+  .stat .num{font-size:30px;font-weight:700;color:var(--navy);font-family:'Cormorant Garamond',serif;}
+  .stat p{font-size:12.5px;color:#777;margin:4px 0 0 0;}
+  .faq-item{border-bottom:1px solid var(--line);padding:18px 0;}
+  .faq-item h4{margin:0;font-size:16px;display:flex;justify-content:space-between;color:var(--navy);cursor:pointer;}
+  .faq-item p{margin:10px 0 0 0;font-size:14px;color:#555;line-height:1.6;}
+  .disclaimer-box{max-width:1180px;margin:0 auto;padding:0 48px 40px 48px;font-size:11.5px;color:#888;line-height:1.6;}
+  footer{background:var(--navy);color:#cfe1e8;padding:48px;text-align:center;font-size:13px;}
+  footer .flogo{font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:.15em;color:#fff;margin-bottom:10px;}
+  .sup{vertical-align:super;font-size:.65em;}
+  @media(max-width:820px){
+    .hero{flex-direction:column;padding:32px 20px;}
+    header{padding:16px 20px;}
+    nav{display:none;}
+    .section{padding:44px 20px;}
+    .section.band{padding:44px 20px;}
+    .two-col{flex-direction:column;}
+    .steps{flex-direction:column;}
+    .stat-row{flex-direction:column;gap:16px;}
+    .benefit-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="mockup-flag">MOCKUP FOR INTERNAL REVIEW ONLY <b>(not live)</b>, not yet pushed to Shopify or sent to client</div>
+
+<div class="announce">100% Happiness Guarantee &nbsp;|&nbsp; Free Shipping on Orders $30+</div>
+
+<header>
+  <div class="logo">ZEND <span>WELLNESS</span></div>
+  <nav>
+    <a href="#">SHOP ALL</a>
+    <a href="#">METAGLOW COLLAGEN</a>
+    <a href="#">EVOLVE CREATINE</a>
+    <a href="#">METABOLIC GUMMIES</a>
+    <a href="#">ABOUT</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-gallery">
+    <img src="https://cdn.shopify.com/s/files/1/0615/3951/6642/files/Evolve_Creatine_Front_dcefb15c-82f3-4434-a48e-1d6d3f7755fb.png?v=1781129888" alt="Evolve Creatine jar, front label">
+    <div class="hero-thumbs">
+      <img src="https://cdn.shopify.com/s/files/1/0615/3951/6642/files/Evolve_Creatine_Front_dcefb15c-82f3-4434-a48e-1d6d3f7755fb.png?v=1781129888" alt="Front">
+      <img src="https://cdn.shopify.com/s/files/1/0615/3951/6642/files/Evolve_Creatine_Back_5270d3ec-70ec-48cd-a852-906a8b50332d.png?v=1781129902" alt="Back, Supplement Facts">
+    </div>
+  </div>
+  <div class="hero-info">
+    <span class="tag">CREATINE HCL, BUILT FOR WOMEN</span>
+    <h1>Evolve Creatine</h1>
+    <p class="hero-sub">A high-absorption creatine HCl complex in two small capsules a day. No loading, no mixing, no chalky scoop, formulated for a woman's body, not a man's.</p>
+    <div class="benefit-grid">
+      <div>Strengthen &amp; tone<span class="sup">*</span></div>
+      <div>Focus &amp; clarity<span class="sup">*</span></div>
+      <div>Gut comfort<span class="sup">*</span></div>
+      <div>Steady energy<span class="sup">*</span></div>
+      <div>No bloat, no bulk<span class="sup">*</span></div>
+      <div>High-absorption creatine HCl</div>
+    </div>
+    <div class="buybox">
+      <div class="price-row"><span class="now">$49.00</span></div>
+      <p class="price-sub">One-time purchase &middot; 60 vegetarian capsules &middot; 30-day supply</p>
+      <button class="cta">ADD TO CART</button>
+      <div class="trust-row">
+        <div>&#9989; 100% Happiness Guarantee</div>
+        <div>&#128666; Free shipping $30+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="badges">
+  <div>Vegetarian Capsules</div>
+  <div>Creatine HCl Formula</div>
+  <div>No Proprietary Blends</div>
+  <div>Made in the USA*</div>
+  <div>100% Happiness Guarantee</div>
+</div>
+
+<section class="section">
+  <div class="two-col">
+    <div style="flex:1;">
+      <h2 style="text-align:left;">Bloated, bulky, and made for men.<br>No wonder you skipped it.</h2>
+      <p style="color:#555;font-size:15px;line-height:1.65;">Most women steer clear of creatine for three reasons: they're worried it'll cause bloating, worried it'll bulk them up, and every tub on the shelf was obviously built for a man. Women naturally hold less creatine and make less of it on their own, which is exactly why Evolve was formulated differently from the start.</p>
+    </div>
+    <div style="flex:1;">
+      <h2 style="text-align:left;">No bloat. No bulk.<br>Just made for you.</h2>
+      <p style="color:#555;font-size:15px;line-height:1.65;">Evolve uses CON-CR&#274;T&reg; creatine HCl, a form that is dramatically more water-soluble than ordinary creatine monohydrate<span class="sup">&dagger;</span>, so two small capsules deliver clinically studied benefits with no loading phase and no gritty powder. Its DigeZyme&reg; enzyme blend is included to support digestion and help ease occasional bloat.<span class="sup">*</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="section band">
+  <div class="inner center">
+    <h2>Three ingredients. All disclosed.</h2>
+    <p class="lede">Evolve is a multi-functional creatine complex: patented creatine HCl, plus a digestive enzyme blend and a trace mineral complex. No proprietary blends hiding the doses, just named, studied ingredients and nothing else.</p>
+    <div style="max-width:720px;margin:0 auto;text-align:left;">
+      <div class="accordion-item">
+        <h4>CON-CR&#274;T&reg; Creatine HCl, 1,500 mg <span>+</span></h4>
+        <p>A patented creatine hydrochloride complex, more water-soluble than ordinary creatine monohydrate.<span class="sup">&dagger;</span> Supports strength and power output as part of a regular training routine.<span class="sup">*</span></p>
+      </div>
+      <div class="accordion-item">
+        <h4>DigeZyme&reg; Enzyme Complex, 50 mg <span>+</span></h4>
+        <p>A blend of alpha-amylase, neutral protease, lactase, cellulase, and lipase, included to support digestion and help ease occasional bloat.<span class="sup">*</span></p>
+      </div>
+      <div class="accordion-item">
+        <h4>MLG-50&reg; Fulvic Acid Trace Mineral Complex, 50 mg <span>+</span></h4>
+        <p>A naturally derived trace mineral complex that supports the body's uptake of key nutrients.<span class="sup">*</span></p>
+      </div>
+      <div class="accordion-item" style="border-bottom:none;">
+        <h4>Other Ingredients <span>+</span></h4>
+        <p>Vegetarian capsule (HPMC), rice flour, stearic acid.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section center">
+  <h2>Backed by real research on women.</h2>
+  <p class="lede">Evolve's 1,500 mg creatine HCl dose is the exact amount studied in a randomized, double-blind, placebo-controlled trial in women.</p>
+  <div class="citation-card">
+    <h3>Korovljev et al., J Am Nutr Assoc 2026;45(3):199 to 210 (NCT06660004)</h3>
+    <p>Creatine has long been studied for strength and cognitive support, but most research historically focused on men. This trial looked specifically at women, using the same 1,500 mg creatine HCl dose found in Evolve.<span class="sup">*</span></p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">1,500mg</div><p>Creatine HCl dose studied in the women's trial, same dose in Evolve</p></div>
+      <div class="stat"><div class="num">2 caps</div><p>Daily serving, no loading phase, no mixing</p></div>
+      <div class="stat"><div class="num">Solubility</div><p>Creatine HCl is more water-soluble than ordinary monohydrate<span class="sup">&dagger;</span></p></div>
+    </div>
+    <p style="font-size:12px;color:#999;margin-bottom:0;">This is education only. Individual results vary based on diet, activity, and metabolism. Consult your healthcare provider before beginning any new supplement.</p>
+  </div>
+</section>
+
+<section class="section band">
+  <div class="inner center">
+    <h2>Two capsules. Once a day.</h2>
+    <div class="steps" style="margin-top:32px;">
+      <div class="step">
+        <div class="num">1</div>
+        <h4>Take 2 capsules daily</h4>
+        <p>With or without food, whatever fits your routine.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h4>No loading phase</h4>
+        <p>Skip the days of gritty powder and guesswork.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h4>Stay consistent</h4>
+        <p>Daily use supports the benefits studied above.<span class="sup">*</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section center">
+  <h2>Trusted by 20,000+ happy Zend customers.</h2>
+  <p class="lede">Evolve Creatine is a newer addition to the Zend lineup. Customer reviews for this product will appear here as they come in.</p>
+</section>
+
+<section class="section band">
+  <div class="inner">
+    <h2 class="center">The stuff you're actually wondering.</h2>
+    <div style="max-width:760px;margin:32px auto 0 auto;">
+      <div class="faq-item">
+        <h4>Is Evolve Creatine safe? <span>+</span></h4>
+        <p>Evolve uses creatine HCl, one of the most researched forms of creatine, at a dose studied in a randomized, double-blind, placebo-controlled clinical trial. As with any supplement, check with your healthcare provider before starting, especially if you're pregnant, nursing, or managing a medical condition.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How is creatine HCl different from creatine monohydrate? <span>+</span></h4>
+        <p>Creatine HCl is a different form of creatine than monohydrate. It is more water-soluble than ordinary creatine monohydrate<span class="sup">&dagger;</span>, which is why Evolve can use two small capsules instead of a large daily scoop. All comparisons on this page are to ordinary creatine monohydrate.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Will this make me bulky or bloated? <span>+</span></h4>
+        <p>Evolve was formulated to avoid the concerns that keep many women away from creatine. Its digestive enzyme blend is included to help ease occasional bloat.<span class="sup">*</span> Results vary by individual.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can I take Evolve with MetaGlow&reg; Collagen?<span>+</span></h4>
+        <p>Yes. Evolve and MetaGlow&reg; Collagen target different things, creatine support versus metabolic and skin support, and can be taken together as part of a daily routine.</p>
+      </div>
+      <div class="faq-item" style="border-bottom:none;">
+        <h4>How long until I notice a difference? <span>+</span></h4>
+        <p>Individual experiences vary based on diet, activity, and metabolism. Consistent daily use is recommended.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="disclaimer-box">
+  * These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.<br><br>
+  &dagger; Solubility vs. ordinary creatine monohydrate reflects water-solubility data on file for CON-CR&#274;T&reg;, not a claim of superior absorption or outcomes. All comparisons on this page are to ordinary creatine monohydrate.<br><br>
+  Made in the USA with globally sourced ingredients.
+</div>
+
+<footer>
+  <div class="flogo">ZEND WELLNESS</div>
+  <p>Intentionally crafted supplements to support your wellness journey.</p>
+  <p style="opacity:.7;font-size:12px;">&copy; 2026 Zend Wellness</p>
+</footer>
+
+</body>
+</html>
